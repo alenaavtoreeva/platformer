@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космический Платформер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas" width="800" height="500"></canvas>
+        
+        <div id="ui">
+            <div id="score">Очки: 0</div>
+            <div id="health">❤️ Здоровье: 100</div>
+            <div id="level">🚀 Уровень: 1</div>
+            <div id="coins">⭐ Звезды: 0/0</div>
+        </div>
+        
+        <div id="menu" class="screen">
+            <h1>🌌 Космический Платформер</h1>
+            <button id="start-btn">🚀 Новая игра</button>
+            <button id="continue-btn" style="display: none;">▶️ Продолжить</button>
+            <button id="level-select-btn">🎯 Выбор уровня</button>
+            <button id="reset-progress-btn">🔄 Сбросить прогресс</button>
+            <div id="progress-info" style="margin-top: 20px; font-size: 14px; color: #ccc;"></div>
+        </div>
+        
+        <div id="level-select" class="screen" style="display: none;">
+            <h1>🎯 Выбор уровня</h1>
+            <div id="level-buttons">
+                <button class="level-btn" data-level="1">🪐 Уровень 1</button>
+                <button class="level-btn" data-level="2">🌕 Уровень 2</button>
+                <button class="level-btn" data-level="3">🛸 Уровень 3</button>
+                <button class="level-btn" data-level="4">⭐ Уровень 4</button>
+                <button class="level-btn" data-level="5">🌀 Уровень 5</button>
+                <button class="level-btn" data-level="6">🌠 Уровень 6</button>
+                <button class="level-btn" data-level="7">👾 Уровень 7</button>
+                <button class="level-btn" data-level="8">💫 Уровень 8</button>
+            </div>
+            <button id="back-to-menu-btn">← Назад</button>
+        </div>
+        
+        <div id="pause-menu" class="screen" style="display: none;">
+            <h1>⏸️ Пауза</h1>
+            <button id="resume-btn">▶️ Продолжить</button>
+            <button id="restart-btn">🔄 Начать уровень заново</button>
+            <button id="main-menu-btn">🏠 Главное меню</button>
+        </div>
+        
+        <div id="game-over" class="screen" style="display: none;">
+            <h1>💀 Игра окончена</h1>
+            <p id="final-score">Очки: 0</p>
+            <button id="restart-game-btn">🔄 Попробовать снова</button>
+            <button id="game-over-menu-btn">🏠 Главное меню</button>
+        </div>
+        
+        <div id="level-complete" class="screen" style="display: none;">
+            <h1>🎉 Уровень пройден!</h1>
+            <p id="level-score">Очки: 0</p>
+            <button id="next-level-btn">➡️ Следующий уровень</button>
+            <button id="complete-menu-btn">🏠 Главное меню</button>
+        </div>
+        
+        <div id="game-complete" class="screen" style="display: none;">
+            <h1>🏆 Поздравляем!</h1>
+            <p>Вы прошли все уровни!</p>
+            <p id="total-score">Общий счет: 0</p>
+            <button id="play-again-btn">🔄 Играть снова</button>
+            <button id="complete-menu-btn-2">🏠 Главное меню</button>
+        </div>
+        
+        <div id="reset-confirm" class="screen" style="display: none;">
+            <h1>🔄 Сброс прогресса</h1>
+            <p>Вы уверены, что хотите сбросить весь прогресс?</p>
+            <p style="color: #ff6b6b; font-size: 14px;">Это действие нельзя отменить!</p>
+            <button id="confirm-reset-btn">✅ Да, сбросить</button>
+            <button id="cancel-reset-btn">❌ Отмена</button>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/star.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/platform.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/levels.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
